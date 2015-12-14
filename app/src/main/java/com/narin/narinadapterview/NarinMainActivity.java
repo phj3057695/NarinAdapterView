@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class NarinMainActivity extends AppCompatActivity {
@@ -41,7 +42,7 @@ public class NarinMainActivity extends AppCompatActivity {
             return 0;
         }
         Integer[] posterID={R.drawable.mov01,R.drawable.mov02,R.drawable.mov03,R.drawable.mov04,R.drawable.mov05,R.drawable.mov06,R.drawable.mov07,R.drawable.mov08,R.drawable.mov09,R.drawable.mov10};
-        String[] movieTitle={"위선자들","내부자들","검은 사제들","크림슨 피크", "위 아 유어 프랜즈", "맥베스", "어떤이의 꿈", "몬스터 헌트", "마션", "스파이 브릿지"};
+        String[] movieTitle={"위선자들","내부자들","검은 사제들","크림슨 피크", "스파이 브릿지", "맥베스", "어떤이의 꿈", "몬스터 헌트", "마션", "스타워즈 : 깨어난 포스"};
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView==null){
@@ -49,9 +50,11 @@ public class NarinMainActivity extends AppCompatActivity {
             }
             ImageView ivPoster = (ImageView) convertView.findViewById(R.id.ivPoster);
             final TextView mTitle = (TextView) convertView.findViewById(R.id.txtName);
+            ivPoster.setLayoutParams(new LinearLayout.LayoutParams(350,400));
             ivPoster.setScaleType(ImageView.ScaleType.FIT_CENTER);
             ivPoster.setPadding(5,5,5,5);
             ivPoster.setImageResource(posterID[position]);
+            mTitle.setPadding(0,0,0,45);
             mTitle.setText(movieTitle[position]);
             final int pos = position;
             ivPoster.setOnClickListener(new View.OnClickListener() {
