@@ -41,8 +41,12 @@ public class NarinMainActivity extends AppCompatActivity {
         public long getItemId(int position) {
             return 0;
         }
-        Integer[] posterID={R.drawable.mov01,R.drawable.mov02,R.drawable.mov03,R.drawable.mov04,R.drawable.mov05,R.drawable.mov06,R.drawable.mov07,R.drawable.mov08,R.drawable.mov09,R.drawable.mov10};
-        String[] movieTitle={"위선자들","내부자들","검은 사제들","크림슨 피크", "스파이 브릿지", "맥베스", "어떤이의 꿈", "몬스터 헌트", "마션", "스타워즈 : 깨어난 포스"};
+        Integer[] posterID={R.drawable.mov01,R.drawable.mov02,R.drawable.mov03,R.drawable.mov04,
+                             R.drawable.mov05,R.drawable.mov06,R.drawable.mov07,R.drawable.mov08,
+                             R.drawable.mov09,R.drawable.mov10};
+        String[] movieTitle={"위선자들","내부자들","검은 사제들","크림슨 피크",
+                               "스파이 브릿지", "맥베스", "어떤이의 꿈", "몬스터 헌트",
+                               "마션", "스타워즈 : 깨어난 포스"};
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView==null){
